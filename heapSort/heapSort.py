@@ -25,7 +25,7 @@ def heapify(queue,i, m):
         heapify(queue, maxValIndex, m)
 
 def BuildHeap(queue, n):
-    for i in range(n//2, 0, -1):
+    for i in range(n//2, -1, -1):
         heapify(queue, i, n)
 
 def heapSort(queue, n):
@@ -38,7 +38,7 @@ def heapSort(queue, n):
         heapify(queue, 0, m)
 
 q = Queue()
-lis = [87, 57, 44, 12, 15, 19, 23]
+lis = [23,57,33, 87,88, 54, 21]
 for i in lis:
     q.enqueue(i)
 
