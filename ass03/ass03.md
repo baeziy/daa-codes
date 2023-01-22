@@ -1,5 +1,6 @@
-##Q1)
-####A)
+## Q1)
+
+#### A)
 
 > The problem of finding the closest value in an unsorted array to a given input number can be solved using a _**divide and conquer**_ approach. The basic idea is to divide the array into smaller subarrays and recursively find the closest value in each subarray.
 
@@ -22,8 +23,9 @@ def foo(array, key):
     return closest
 ```
 
-####B)
-The best strategy to solve this problem is divide and conquer. We can divide the array into smaller subproblems, find the middle element, check if the missing number is in the left or right subarray, and recursively call the function until we find the missing number. This approach has a time complexity of O(log n). If we know the common ratio of the progression we can solve it in O(1) time.
+#### B)
+
+> The best strategy to solve this problem is divide and conquer. We can divide the array into smaller subproblems, find the middle element, check if the missing number is in the left or right subarray, and recursively call the function until we find the missing number. This approach has a time complexity of O(log n). If we know the common ratio of the progression we can solve it in O(1) time.
 
 ```python
 def findMissingNumber(arr, start, end):
@@ -42,8 +44,9 @@ def findMissingNumber(arr, start, end):
 
 ```
 
-####C)
-To find a key in a 2-D matrix where the data is sorted row-wise and column-wise, the best approach is divide and conquer. We can use a binary search algorithm by dividing the matrix into smaller submatrices and repeatedly find the middle element until the key is found or it is determined that it doesn't exist in the matrix.
+#### C)
+
+> To find a key in a 2-D matrix where the data is sorted row-wise and column-wise, the best approach is divide and conquer. We can use a binary search algorithm by dividing the matrix into smaller submatrices and repeatedly find the middle element until the key is found or it is determined that it doesn't exist in the matrix.
 
 ```python
 def searchKey(matrix, key):
@@ -65,8 +68,9 @@ def searchKey(matrix, key):
 
 ```
 
-####D)
-To find the value of continuous function F(n) = F (n/2 ^ n/3) + ceil (n/2) for first 100 values, the best approach is dynamic programming. We can create an array to store the values of F(n) for different n and fill it in using the recursive definition of the function.
+#### D)
+
+> To find the value of continuous function F(n) = F (n/2 ^ n/3) + ceil (n/2) for first 100 values, the best approach is dynamic programming. We can create an array to store the values of F(n) for different n and fill it in using the recursive definition of the function.
 
 ```python
 def findF(n):
@@ -81,8 +85,9 @@ def findF(n):
 
 ```
 
-####E)
-To find the first unique (not duplicated) element in a sorted array, the best approach is divide and conquer. We can divide the array into smaller subarrays and repeatedly find the middle element of the subarrays. Comparing the middle element to its neighbours will allow us to determine if it is the first unique element, if not, we can discard one half of the subarray, until the first unique element is found.
+#### E)
+
+> To find the first unique (not duplicated) element in a sorted array, the best approach is divide and conquer. We can divide the array into smaller subarrays and repeatedly find the middle element of the subarrays. Comparing the middle element to its neighbours will allow us to determine if it is the first unique element, if not, we can discard one half of the subarray, until the first unique element is found.
 
 ```python
 def findFirstUnique(arr, left, right):
@@ -104,7 +109,7 @@ def findFirstUnique(arr, left, right):
 
 ---
 
-##Q2)
+## Q2)
 
 Dynamic programming can be used to solve the Ackerman's function problem, by creating a 2D table and filling it with the function values for different m and n, based on the recursive definition of the function and smaller subproblems values. However, this approach is not efficient as the function is complex and not primitive recursive, its value grows quickly and the size of the table will be too large to fit in memory, also the time complexity of the algorithm will be high.
 
@@ -124,7 +129,7 @@ def ackerman(m, n):
 
 ---
 
-##Q3)
+## Q3)
 
 ```
    |   | S | T | A | R |
@@ -153,7 +158,8 @@ def ackerman(m, n):
 • E(3,3) = min(E(2,3) + 2, E(3, 2) + 1, E(2, 2) + cost) = min(6, 5, 1) = 5
 • E(4,3) = min(E(3,3) + 2, E(4, 2) + 1, E(3, 2) + cost) = min(7, 6,5) = 6
 
-###B)
+### B)
+
 The optimal path to minimize the transformation cost between the two strings "STAR" and "TREK" is to perform the following sequence of operations:
 
 - Replace the first character 'S' with 'T', which costs 1
@@ -164,7 +170,8 @@ The optimal path to minimize the transformation cost between the two strings "ST
 
 ---
 
-##Q4
+## Q4
+
 To find the frequency of a specific key value in a matrix where the number of rows is equal to the number of columns and is in some power of 4, two approaches can be used: divide and conquer, and dynamic programming.
 
 **Divide and Conquer**: This approach divides the matrix into smaller sub-matrices and searches for the key value in each sub-matrix. This process is repeated recursively until the key value is found. The time complexity of this approach is O(n log n), as the matrix is divided into smaller sub-matrices and the key value is searched in each sub-matrix.
